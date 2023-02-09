@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 // import { useContextProvider } from "../Provider/Provider.js";
 import Home from "../Pages/Home.js";
 import Index from "../Pages/Index.js";
+import Show from "../Pages/Show.js";
 
 export default function RouteComponent() {
   // const { hidden } = useContextProvider();
@@ -9,7 +10,7 @@ export default function RouteComponent() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/bucketlist" element={<Index />} />
-      {/* <Route path="/snacks/:id" element={<Show />} /> */}
+      <Route path="/bucketlist/:id" element={<Show />} />
       {/* <Route path="/snacks/:id/edit" element={<Edit />} /> */}
       {/* <Route path="/snacks/new" element={<New />} /> */}
       {/* <Route path="/about" element={<About />} /> */}
