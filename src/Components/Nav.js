@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider";
 import darkMode from "../assets/darkmode.png";
 import lightMode from "../assets/lightmode.png";
+import logo from "../assets/bucketlist-icon.png";
 import "./Nav.css";
 
 export default function Nav() {
@@ -16,15 +17,11 @@ export default function Nav() {
 
   return (
     <nav>
-      {/* <Link to="/">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2553/2553691.png"
-          alt="logo"
-          height="45px"
-        />
-      </Link> */}
+      <Link to="/">
+        <img src={logo} alt="logo" height="45px" />
+      </Link>
       <Link to="/bucketlist">Bucket List</Link>
-      {/* <Link to="/snacks/new">New</Link> */}
+      <Link to="/bucketlist/new">New</Link>
       {/* <Link to="/about">About</Link> */}
       <button className="toggleTheme" onClick={toggleTheme}>
         {theme === "light" ? (
@@ -34,6 +31,5 @@ export default function Nav() {
         )}
       </button>
     </nav>
-    // <h1>Nav</h1>
   );
 }

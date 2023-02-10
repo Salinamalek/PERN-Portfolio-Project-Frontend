@@ -12,8 +12,7 @@ export default function Provider({ children }) {
   const API = process.env.REACT_APP_API_URL;
   const [list, setList] = useState([]);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-  // const [hidden, setHidden] = useState(true);
-  // const [trigger, setTrigger] = useState(1);
+  const [trigger, setTrigger] = useState(1);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -35,10 +34,8 @@ export default function Provider({ children }) {
         setList,
         theme,
         setTheme,
-        // hidden,
-        // setHidden,
-        // trigger,
-        // setTrigger,
+        trigger,
+        setTrigger,
       }}
     >
       <Nav />
