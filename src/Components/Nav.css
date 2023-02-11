@@ -1,5 +1,5 @@
 nav {
-  background: linear-gradient(to right, #3590f2, #4f9bec, #b1d2f3, #8abcee);
+  background: linear-gradient(to right, #b1d2f3, #8abcee, #4f9bec, #3590f2);
   display: flex;
   justify-content: space-around;
   align-content: center;
