@@ -22,7 +22,7 @@ export default function Nav() {
       </Link>
       <Link to="/bucketlist">Bucket List</Link>
       <Link to="/bucketlist/new">New</Link>
-      {/* <Link to="/about">About</Link> */}
+      <Link to="/about">About</Link>
       <button className="toggleTheme" onClick={toggleTheme}>
         {theme === "light" ? (
           <img className="toggleButton" src={lightMode} alt="lm" />

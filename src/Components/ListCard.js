@@ -8,20 +8,14 @@ export default function ListCard({ list }) {
   // const { API, axios } = useContextProvider();
 
   return (
-    <section className="list-details">
-      <tr>
-        <td>
-          {" "}
-          <Link to={`/bucketlist/${id}`}>
-            <p>{name}</p>
-          </Link>
-        </td>
-        <td>{list.visited ? <span>Y</span> : <span>N</span>}</td>
-      </tr>
-
-      {/* <p>Description: {description}</p> */}
-      {/* <img src={image} alt={location} /> */}
-      {/* <p>Location: {location}</p> */}
-    </section>
+    <tr>
+      <td>
+        {" "}
+        <Link to={`/bucketlist/${id}`}>
+          <p>{name}</p>
+        </Link>
+      </td>
+      <td>{list.visited ? <span>Yes</span> : <span>No</span>}</td>
+    </tr>
   );
 }

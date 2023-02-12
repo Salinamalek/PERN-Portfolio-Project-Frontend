@@ -54,7 +54,7 @@ export default function Form() {
 
   return (
     <div className="form">
-      <h2>{id ? "" : "Add a Snack"}</h2>
+      <h2>{id ? "" : "Add a Wish"}</h2>
       <form onSubmit={handleSubmit}>
         <div id="form-img">
           <img
@@ -100,7 +100,7 @@ export default function Form() {
         <input
           id="submit-button"
           type="submit"
-          value={id ? "Save Changes" : "Add Snack"}
+          value={id ? "Save Changes" : "Add Bucket List Idea"}
         />
       </form>
     </div>

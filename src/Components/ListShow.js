@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider";
-// import "./SnackShow.css";
+import "./ListShow.css";
 
 export default function SnackShow() {
   const { API, axios } = useContextProvider();
@@ -19,9 +19,45 @@ export default function SnackShow() {
       .catch(() => navigate("/not-found"));
   }, [id, navigate]);
 
+  const deleteBucketList = () => {
+    axios
+      .delete(`${API}/bucketlist/${id}`)
+      .then(() => {
+        navigate(`/bucketlist`);
+      })
+      .catch((c) => console.error("catch", c));
+  };
+
+  const handleDelete = () => {
+    deleteBucketList();
+  };
+
   return (
     <div className="list-info">
-      <h1>{lists.name}</h1>
+      <div className="show-info">
+        <h1>{lists.name}</h1>
+        <img className="listImg" src={lists.image} alt={lists.location} />
+        <h2>Description: {lists.description}</h2>
+        <h2>Location: {lists.location}</h2>
+        <h2>Visited: {lists.visited ? <span>Yes</span> : <span>No</span>}</h2>
+      </div>
+      <div className="buttons">
+        <div>
+          <Link to={`/bucketlist`}>
+            <button className="navButtons">Back</button>
+          </Link>
+        </div>
+        <div>
+          <Link to={`/bucketlist/${id}/edit`}>
+            <button className="navButtons">Edit</button>
+          </Link>
+        </div>
+        <div>
+          <button className="navButtons" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

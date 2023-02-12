@@ -5,6 +5,7 @@ import Show from "../Pages/Show.js";
 import FourOFour from "../Pages/FourOFour.js";
 import New from "../Pages/New.js";
 import Edit from "../Pages/Edit.js";
+import About from "../Pages/About.js";
 
 export default function RouteComponent() {
   return (
@@ -14,7 +15,7 @@ export default function RouteComponent() {
       <Route path="/bucketlist/:id" element={<Show />} />
       <Route path="/bucketlist/:id/edit" element={<Edit />} />
       <Route path="/bucketlist/new" element={<New />} />
-      {/* <Route path="/about" element={<About />} /> */}
+      <Route path="/about" element={<About />} />
       <Route path="/not-found" element={<FourOFour />} />
       <Route path="*" element={<Navigate to="/not-found" />} />
     </Routes>
