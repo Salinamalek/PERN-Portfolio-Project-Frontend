@@ -1,23 +1,33 @@
+.index {
+  height: 100vh;
+  padding-top: 5rem;
+}
+.index-list {
+  /* border-radius: 100px; */
+}
+
 table {
   width: 50%;
   margin: 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-collapse: collapse;
   text-align: center;
   vertical-align: middle;
   table-layout: fixed;
+  /* border-radius: 20px; */
 }
 
 thead th {
   width: 50%;
 }
 th {
-  background-color: rgb(81, 156, 254);
+  background-color: rgb(106, 152, 213);
 }
 th,
 td {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   padding: 10px;
+  /* border-radius: 10px; */
 }
 
 #completed {
@@ -26,7 +36,7 @@ td {
 
 td {
   text-align: center;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   padding: 0px 20px;
 }
 /* 
@@ -39,5 +49,14 @@ tbody tr:nth-child(even) {
   background: #60a5ff;
 }
 tbody tr:nth-child(odd) {
-  background: #a6d8fd;
+  background: #8dcaf8;
+}
+
+a {
+  all: unset;
+}
+
+a:hover {
+  cursor: pointer;
+  color: rgb(154, 222, 241);
 }

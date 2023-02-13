@@ -15,7 +15,7 @@ export default function ListCard({ list }) {
           <p>{name}</p>
         </Link>
       </td>
-      <td>{list.visited ? <span>Yes</span> : <span>No</span>}</td>
+      <td>{list.visited ? <span>✅</span> : <span>❌</span>}</td>
     </tr>
   );
 }

@@ -14,7 +14,7 @@ export default function Form() {
     description: "",
     location: "",
     image: "",
-    visited: "",
+    visited: false,
   });
 
   useEffect(() => {
@@ -27,12 +27,16 @@ export default function Form() {
   }, [id]);
 
   const handleChange = (event) => {
+    console.log("handle change");
     setLists({ ...lists, [event.target.id]: event.target.value });
   };
 
   const handleSubmit = (event) => {
+    console.log("handle submit");
+    console.log(lists);
     event.preventDefault();
     if (id) {
+      console.log("update");
       axios
         .put(`${API}/bucketlist/${id}`, lists)
         .then(() => {
@@ -42,6 +46,7 @@ export default function Form() {
         .catch((error) => console.log(error));
     } else {
       // update list with added list info before navigating with response from post request
+      console.log("new form");
       axios
         .post(`${API}/bucketlist`, lists)
         .then(({ data }) => {
@@ -87,7 +92,7 @@ export default function Form() {
             <input
               id="image"
               type="url"
-              placeholder="include http:// or https://"
+              placeholder=" include http:// or https://"
               onChange={handleChange}
               value={lists.image}
             />

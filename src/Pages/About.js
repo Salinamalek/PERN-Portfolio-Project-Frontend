@@ -2,27 +2,21 @@ import React from "react";
 
 export default function About() {
   return (
-    <div align="center">
-      <h1>About</h1>
-      <h2>Salina Malek</h2>
-      <img
-        src="https://media3.giphy.com/media/sthmCnCpfr8M8jtTQy/giphy.gif"
-        alt="temporary-img"
-        height="300px"
-        width="300px"
-      />
-      <h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut sem
-        non justo sagittis convallis. Maecenas congue ipsum ac semper tristique.
-        Etiam eget tortor maximus, tincidunt nunc vitae, congue nibh. Nam et
-        lorem malesuada urna auctor facilisis. Suspendisse vel tempus libero, eu
-        consectetur odio. Integer posuere tempor justo quis eleifend. Proin a
-        hendrerit odio. Curabitur maximus auctor tortor quis lobortis. Ut varius
-        arcu libero, sed auctor felis dictum id. Pellentesque sollicitudin,
-        lacus vitae ornare accumsan, nulla nisl lacinia odio, et semper magna
-        dolor vel metus. Fusce consectetur ipsum finibus augue pretium, sit amet
-        lacinia neque consequat.
-      </h3>
+    <div align="center" className="about">
+      <div className="about-info">
+        <h2 style={{ color: "lightblue" }}>Meet the Dev:</h2>
+        <h1>Salina Malek</h1>
+        <img
+          src="https://avatars.githubusercontent.com/u/105737474?v=4"
+          alt="dev-img"
+        />
+        <h3>
+          I am a Full Stack Web Development Student at Pursuit, a Google-funded
+          12-month intensive coding program that provides experience with
+          JavaScript, CSS, HTML, Node, and React. I aspire to be a software
+          engineer that positively impacts the world.
+        </h3>
+      </div>
     </div>
   );
 }
