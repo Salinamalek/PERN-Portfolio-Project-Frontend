@@ -6,10 +6,11 @@ nav {
   /* background-image: url("../assets/clouds.jpeg"); */
 }
 nav a {
-  padding-top: 20px;
+  padding-top: 10px;
   text-decoration: none;
   color: rgb(239, 235, 235);
   font-size: 24px;
+  margin-top: 20px;
 }
 
 nav a:hover {
@@ -17,7 +18,8 @@ nav a:hover {
   transform: scale(1.3);
 }
 nav a img {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  height: 60px;
 }
 
 .toggleTheme {
@@ -28,12 +30,12 @@ nav a img {
 .toggleButton {
   height: 60px;
   width: 60px;
-  border: 1px solid #65655e;
-  border-radius: 20px;
+  /* border: 1px solid #65655e; */
+  /* border-radius: 20px; */
 }
 
 .toggleButton:hover {
-  box-shadow: 3px 5px 5px 1px #52524b79;
+  /* box-shadow: 3px 5px 5px 1px #52524b79; */
   transform: scale(1.1);
 }
 

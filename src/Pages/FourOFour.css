@@ -1,6 +1,10 @@
 .error {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+}
+
+#error-img {
+  margin-top: -1rem;
+  height: 50%;
+  width: 50%;
 }

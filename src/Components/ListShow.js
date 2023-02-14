@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider";
+import yes from "../assets/yes.png";
+import no from "../assets/no.png";
 import "./ListShow.css";
 
 export default function SnackShow() {
@@ -38,9 +40,22 @@ export default function SnackShow() {
         <h1>{lists.name}</h1>
         <img className="listImg" src={lists.image} alt={lists.location} />
         <h3>Description: {lists.description}</h3>
-        <h3>Location: {lists.location}</h3>
         <h3>
-          Completed: {lists.completed ? <span>✅</span> : <span>❌</span>}
+          Location: {lists.location}, {lists.continent}
+        </h3>
+        <h3>
+          Completed:{" "}
+          {lists.completed ? (
+            <span>
+              <br />
+              <img src={yes} alt="yes" />
+            </span>
+          ) : (
+            <span>
+              <br />
+              <img src={no} alt="no" />
+            </span>
+          )}
         </h3>
       </div>
       <div className="buttons">

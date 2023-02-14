@@ -3,6 +3,9 @@ import { useContextProvider } from "../Provider/Provider";
 import darkMode from "../assets/darkmode.png";
 import lightMode from "../assets/lightmode.png";
 import logo from "../assets/bucketlist-icon.png";
+import bucket from "../assets/bucket.png";
+import dark from "../assets/dark.png";
+import light from "../assets/light.png";
 import { BsCardChecklist } from "react-icons/bs";
 import { BsCloudPlus } from "react-icons/bs";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
@@ -21,22 +24,25 @@ export default function Nav() {
   return (
     <nav>
       <Link to="/">
-        <img src={logo} alt="logo" height="45px" />
+        <img src={bucket} alt="logo" />
       </Link>
       <Link to="/bucketlist">
-        <BsCardChecklist /> Bucket List
+        <BsCardChecklist /> <br />
+        Bucket List
       </Link>
       <Link to="/bucketlist/new">
-        <BsCloudPlus /> New
+        <BsCloudPlus /> <br />
+        New
       </Link>
       <Link to="/about">
-        <AiOutlineQuestionCircle /> About
+        <AiOutlineQuestionCircle /> <br />
+        About
       </Link>
       <button className="toggleTheme" onClick={toggleTheme}>
         {theme === "light" ? (
-          <img className="toggleButton" src={lightMode} alt="lm" />
+          <img className="toggleButton" src={dark} alt="lm" />
         ) : (
-          <img className="toggleButton" src={darkMode} alt="dm" />
+          <img className="toggleButton" src={light} alt="dm" />
         )}
       </button>
     </nav>

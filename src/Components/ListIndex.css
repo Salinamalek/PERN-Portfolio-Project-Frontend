@@ -1,6 +1,7 @@
 .index {
-  height: 100vh;
-  padding-top: 5rem;
+  /* height: 100vh; */
+  padding-top: 3rem;
+  padding-bottom: 5rem;
 }
 .index-list {
   /* border-radius: 100px; */

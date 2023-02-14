@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       {/* <h1>Footer</h1> */}
       {/* Snax - <Link to="/about">Team 3</Link> - Feb '23 */}
-      Salina Malek • Day Dream • Feb 2023
+      Salina M • Day Dream • Feb 2023
     </footer>
   );
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
-import NoImage from "../assets/default.png";
+import noimage from "../assets/noimage.png";
 import "./Form.css";
 
 export default function Form() {
@@ -67,7 +67,7 @@ export default function Form() {
       <form onSubmit={handleSubmit}>
         <div id="form-img">
           <img
-            src={lists.image !== "" ? lists.image : NoImage}
+            src={lists.image !== "" ? lists.image : noimage}
             alt="awaiting valid url"
           />
           <div>
