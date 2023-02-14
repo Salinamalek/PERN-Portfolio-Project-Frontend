@@ -3,7 +3,6 @@ nav {
   display: flex;
   justify-content: space-around;
   align-content: center;
-  /* background-image: url("../assets/clouds.jpeg"); */
 }
 nav a {
   padding-top: 10px;
@@ -29,13 +28,9 @@ nav a img {
 
 .toggleButton {
   height: 60px;
-  width: 60px;
-  /* border: 1px solid #65655e; */
-  /* border-radius: 20px; */
 }
 
 .toggleButton:hover {
-  /* box-shadow: 3px 5px 5px 1px #52524b79; */
   transform: scale(1.1);
 }
 

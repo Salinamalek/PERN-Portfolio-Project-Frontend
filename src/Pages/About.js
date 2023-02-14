@@ -7,21 +7,10 @@ export default function About() {
   return (
     <div align="center" className="about">
       <div className="about-info">
-        {/* <h2 style={{ color: "lightblue" }}>About The Dev</h2> */}
-        {/* <div className="flip-card">
-          <div className="flip-card-inner">
-        <div className="flip-card-front"> */}
         <img
           src="https://avatars.githubusercontent.com/u/105737474?v=4"
           alt="dev-img"
         />
-        {/* <div class="flip-card-back">
-                <h1>Salina Malek</h1>
-                <p>Full Stack Web Developer</p>
-              </div> */}
-        {/* </div>
-          </div>
-        </div> */}
         <h1>Salina Malek</h1>
         <h3>
           I am a Full Stack Web Development Student at Pursuit, a Google-funded

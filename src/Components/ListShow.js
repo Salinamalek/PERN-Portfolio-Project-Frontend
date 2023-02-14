@@ -8,6 +8,7 @@ import "./ListShow.css";
 export default function SnackShow() {
   const { API, axios } = useContextProvider();
   const [lists, setLists] = useState([]);
+  const [related, setRelated] = useState([]);
   let { id } = useParams();
   let navigate = useNavigate();
 
@@ -15,8 +16,17 @@ export default function SnackShow() {
     axios
       .get(`${API}/bucketlist/${id}`)
       .then((res) => {
-        // console.log(res.data);
         setLists(res.data);
+      })
+      .catch(() => navigate("/not-found"));
+  }, [id, navigate]);
+
+  useEffect(() => {
+    axios
+      .get(`${API}/bucketlist`)
+      .then((res) => {
+        // console.log(res.data);
+        setRelated(res.data);
       })
       .catch(() => navigate("/not-found"));
   }, [id, navigate]);
@@ -74,6 +84,23 @@ export default function SnackShow() {
             Delete
           </button>
         </div>
+      </div>
+      <h3>Related Bucket List Ideas:</h3>
+      <div className="related-list">
+        {related.map((el) => {
+          if (el.continent.includes(lists.continent) && el.id !== lists.id) {
+            return (
+              <div key={el.id} className="ind-cards">
+                <Link to={`/bucketlist/${el.id}`}>
+                  <img className="related-imgs" src={el.image} />
+                </Link>
+                <Link to={`/bucketlist/${el.id}`}>
+                  <h4>{el.name}</h4>
+                </Link>
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );

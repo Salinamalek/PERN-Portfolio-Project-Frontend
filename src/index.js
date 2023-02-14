@@ -4,7 +4,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Provider from "./Provider/Provider";
 import "./index.css";
 import App from "./App";
-// import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,5 +14,4 @@ root.render(
       </Provider>
     </React.StrictMode>
   </Router>
-  // document.getElementById("root")
 );

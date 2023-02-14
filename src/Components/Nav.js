@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider";
-import darkMode from "../assets/darkmode.png";
-import lightMode from "../assets/lightmode.png";
-import logo from "../assets/bucketlist-icon.png";
-import bucket from "../assets/bucket.png";
 import dark from "../assets/dark.png";
 import light from "../assets/light.png";
 import { BsCardChecklist } from "react-icons/bs";
 import { BsCloudPlus } from "react-icons/bs";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+import logo from "../assets/logo.png";
 import "./Nav.css";
 
 export default function Nav() {
@@ -24,7 +21,7 @@ export default function Nav() {
   return (
     <nav>
       <Link to="/">
-        <img src={bucket} alt="logo" />
+        <img src={logo} alt="logo" />
       </Link>
       <Link to="/bucketlist">
         <BsCardChecklist /> <br />

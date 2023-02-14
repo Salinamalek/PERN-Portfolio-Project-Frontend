@@ -109,9 +109,6 @@ export default function Form() {
             />
           </div>
         </div>
-        {/* <div id="visited-icon">
-          <h3>Visited: {lists.visited ? "Yes" : "No"}</h3>
-        </div> */}
         <input
           id="submit-button"
           type="submit"

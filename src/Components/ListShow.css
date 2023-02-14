@@ -21,7 +21,6 @@
   margin: 30px;
   margin-bottom: 20px;
   width: 50%;
-  /* height: 55%; */
 }
 
 .listImg {
@@ -52,4 +51,22 @@
   background-color: cornflowerblue;
   color: darkslateblue;
   border-color: aquamarine;
+}
+
+.related-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.ind-cards {
+  border: 2px solid rgb(150, 150, 251);
+  border-radius: 30px;
+  background-color: rgb(153, 196, 243);
+  width: 100%;
+  padding: 20px;
+}
+.related-imgs {
+  width: 200px;
+  border-radius: 20px;
 }
