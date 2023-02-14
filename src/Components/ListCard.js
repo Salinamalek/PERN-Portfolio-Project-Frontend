@@ -4,7 +4,7 @@ import { useContextProvider } from "../Provider/Provider";
 import "./ListCard.css";
 
 export default function ListCard({ list }) {
-  const { id, name, description, location, image, visited } = list;
+  const { id, name, description, location, image, completed } = list;
   // const { API, axios } = useContextProvider();
 
   return (
@@ -15,7 +15,7 @@ export default function ListCard({ list }) {
           <p>{name}</p>
         </Link>
       </td>
-      <td>{list.visited ? <span>✅</span> : <span>❌</span>}</td>
+      <td>{list.completed ? <span>✅</span> : <span>❌</span>}</td>
     </tr>
   );
 }

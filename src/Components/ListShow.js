@@ -39,7 +39,9 @@ export default function SnackShow() {
         <img className="listImg" src={lists.image} alt={lists.location} />
         <h3>Description: {lists.description}</h3>
         <h3>Location: {lists.location}</h3>
-        <h3>Visited: {lists.visited ? <span>✅</span> : <span>❌</span>}</h3>
+        <h3>
+          Completed: {lists.completed ? <span>✅</span> : <span>❌</span>}
+        </h3>
       </div>
       <div className="buttons">
         <div>

@@ -14,7 +14,7 @@ export default function Form() {
     description: "",
     location: "",
     image: "",
-    visited: false,
+    completed: false,
   });
 
   useEffect(() => {
