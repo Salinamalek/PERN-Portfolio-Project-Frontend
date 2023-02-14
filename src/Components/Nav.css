@@ -3,6 +3,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-content: center;
+  /* background-image: url("../assets/clouds.jpeg"); */
 }
 nav a {
   padding-top: 20px;

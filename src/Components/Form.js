@@ -57,6 +57,10 @@ export default function Form() {
     }
   };
 
+  const handleCheckBox = () => {
+    setLists({ ...lists, completed: !lists.completed });
+  };
+
   return (
     <div className="form">
       <h2>{id ? "" : "Add a Wish"}</h2>
@@ -96,9 +100,15 @@ export default function Form() {
               onChange={handleChange}
               value={lists.image}
             />
+            <label htmlFor="completed">Completed:</label>
+            <input
+              id="completed"
+              type="checkbox"
+              onChange={handleCheckBox}
+              checked={lists.completed}
+            />
           </div>
         </div>
-
         {/* <div id="visited-icon">
           <h3>Visited: {lists.visited ? "Yes" : "No"}</h3>
         </div> */}
