@@ -67,6 +67,7 @@ export default function Form() {
       <form onSubmit={handleSubmit}>
         <div id="form-img">
           <img
+            className="formImg"
             src={lists.image !== "" ? lists.image : noimage}
             alt="awaiting valid url"
           />
@@ -112,7 +113,7 @@ export default function Form() {
         <input
           id="submit-button"
           type="submit"
-          value={id ? "Save Changes" : "Add Bucket List Idea"}
+          value={id ? "Save Changes" : "Add Bucket List Wish"}
         />
       </form>
     </div>

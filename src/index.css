@@ -73,10 +73,24 @@ body {
   background-color: #276cb6;
   width: 10%;
   background-color: rgb(93, 152, 241);
-  color: rgb(14, 68, 115);
+  color: rgb(255, 255, 255);
   border: 2px solid rgb(65, 245, 255);
   border-radius: 15px;
   padding: 10px 20px 10px 20px;
   height: 35px;
   font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .welcome-img {
+    width: 50%;
+  }
+
+  .about-info {
+    width: 80%;
+  }
+
+  .about-info img {
+    width: 60%;
+  }
 }

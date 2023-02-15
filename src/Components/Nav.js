@@ -25,7 +25,7 @@ export default function Nav() {
       </Link>
       <Link to="/bucketlist">
         <BsCardChecklist /> <br />
-        Bucket List
+        List
       </Link>
       <Link to="/bucketlist/new">
         <BsCloudPlus /> <br />

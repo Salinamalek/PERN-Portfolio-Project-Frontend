@@ -70,3 +70,26 @@
   width: 200px;
   border-radius: 20px;
 }
+
+@media (max-width: 700px) {
+  .show-info {
+    width: 80%;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .related-list {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .listImg {
+    width: 80%;
+  }
+
+  .related-imgs {
+    width: 70%;
+  }
+}

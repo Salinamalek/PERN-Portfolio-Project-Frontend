@@ -9,12 +9,10 @@ export default function Home() {
           <span>Welcome to DAYDREAM!</span>
         </h1>
         <img src={welcome} className="welcome-img" />
-        <br />
         <h3>
           An app that allows you to log your bucketlist wishes, and some of ours
           too 😉!
         </h3>
-        <br />
         <Link className="welcome-btn" to="/bucketlist">
           See Your Wishes!
         </Link>

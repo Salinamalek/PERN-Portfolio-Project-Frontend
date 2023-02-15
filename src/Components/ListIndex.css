@@ -47,3 +47,13 @@ a:hover {
   cursor: pointer;
   color: rgb(154, 222, 241);
 }
+
+@media (max-width: 700px) {
+  table {
+    width: 85%;
+  }
+
+  thead th {
+    width: 40%;
+  }
+}
