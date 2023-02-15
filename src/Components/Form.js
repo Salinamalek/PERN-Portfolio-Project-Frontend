@@ -13,6 +13,7 @@ export default function Form() {
     name: "",
     description: "",
     location: "",
+    continent: "",
     image: "",
     completed: false,
   });
@@ -92,6 +93,13 @@ export default function Form() {
               type="text"
               onChange={handleChange}
               value={lists.location}
+            />
+            <label htmlFor="continent">Continent:</label>
+            <input
+              id="continent"
+              type="text"
+              onChange={handleChange}
+              value={lists.continent}
             />
             <label htmlFor="image">Image URL:</label>
             <input

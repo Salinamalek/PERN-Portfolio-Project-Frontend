@@ -5,7 +5,7 @@ import yes from "../assets/yes.png";
 import no from "../assets/no.png";
 import "./ListShow.css";
 
-export default function SnackShow() {
+export default function ListShow() {
   const { API, axios } = useContextProvider();
   const [lists, setLists] = useState([]);
   const [related, setRelated] = useState([]);
@@ -87,20 +87,37 @@ export default function SnackShow() {
       </div>
       <h3>Related Bucket List Ideas:</h3>
       <div className="related-list">
-        {related.map((el) => {
-          if (el.continent.includes(lists.continent) && el.id !== lists.id) {
-            return (
-              <div key={el.id} className="ind-cards">
-                <Link to={`/bucketlist/${el.id}`}>
-                  <img className="related-imgs" src={el.image} />
-                </Link>
-                <Link to={`/bucketlist/${el.id}`}>
-                  <h4>{el.name}</h4>
-                </Link>
-              </div>
-            );
-          }
-        })}
+        {
+          related &&
+            related.map((el) => {
+              if (el.continent === lists.continent && el.id !== lists.id) {
+                return (
+                  <div key={el.id} className="ind-cards">
+                    <Link to={`/bucketlist/${el.id}`}>
+                      <img className="related-imgs" src={el.image} />
+                    </Link>
+                    <Link to={`/bucketlist/${el.id}`}>
+                      <h4>{el.name}</h4>
+                    </Link>
+                  </div>
+                );
+              }
+            })
+          // related.map((el) => {
+          //   if (el.continent.includes(lists.continent) && el.id !== lists.id) {
+          //     return (
+          //       <div key={el.id} className="ind-cards">
+          //         <Link to={`/bucketlist/${el.id}`}>
+          //           <img className="related-imgs" src={el.image} />
+          //         </Link>
+          //         <Link to={`/bucketlist/${el.id}`}>
+          //           <h4>{el.name}</h4>
+          //         </Link>
+          //       </div>
+          //     );
+          // }
+          // })}
+        }
       </div>
     </div>
   );
