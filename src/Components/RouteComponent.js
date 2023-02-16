@@ -6,6 +6,7 @@ import FourOFour from "../Pages/FourOFour.js";
 import New from "../Pages/New.js";
 import Edit from "../Pages/Edit.js";
 import About from "../Pages/About.js";
+import Hidden from "../Pages/Secret";
 
 export default function RouteComponent() {
   return (
@@ -17,6 +18,7 @@ export default function RouteComponent() {
       <Route path="/bucketlist/new" element={<New />} />
       <Route path="/about" element={<About />} />
       <Route path="/not-found" element={<FourOFour />} />
+      <Route path="/secret" element={<Hidden />} />
       <Route path="*" element={<Navigate to="/not-found" />} />
     </Routes>
   );

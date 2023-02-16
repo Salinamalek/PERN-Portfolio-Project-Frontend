@@ -81,6 +81,14 @@ body {
   font-size: 18px;
 }
 
+.light .secret-text {
+  color: #c3e0fd;
+}
+
+.dark .secret-text {
+  color: rgb(100, 100, 219);
+}
+
 @media (max-width: 700px) {
   .welcome-img {
     width: 50%;

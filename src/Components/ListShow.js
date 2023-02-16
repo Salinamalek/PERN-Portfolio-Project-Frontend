@@ -53,6 +53,7 @@ export default function ListShow() {
         <h3>
           Location: {lists.location}, {lists.continent}
         </h3>
+        <h3>Continent: {lists.continent}</h3>
         <h3>
           Completed:{" "}
           {lists.completed ? (
