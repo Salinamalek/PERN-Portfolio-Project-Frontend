@@ -88,7 +88,7 @@ export default function ListShow() {
       <div className="related-list">
         {related &&
           related.map((el) => {
-            if (el.continent.includes(lists.continent) && el.id !== lists.id) {
+            if (el.continent === lists.continent && el.id !== lists.id) {
               return (
                 <div key={el.id} className="ind-cards">
                   <Link to={`/bucketlist/${el.id}`}>
@@ -107,7 +107,7 @@ export default function ListShow() {
 }
 
 // related.map((el) => {
-//   if (el.continent === lists.continent && el.id !== lists.id) {
+//   if (el.continent.includes(lists.continent) && el.id !== lists.id) {
 //     return (
 //       <div key={el.id} className="ind-cards">
 //         <Link to={`/bucketlist/${el.id}`}>
@@ -118,5 +118,5 @@ export default function ListShow() {
 //         </Link>
 //       </div>
 //     );
-//   }
+// }
 // })}
