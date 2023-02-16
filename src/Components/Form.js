@@ -33,11 +33,8 @@ export default function Form() {
   };
 
   const handleSubmit = (event) => {
-    console.log("handle submit");
-    console.log(lists);
     event.preventDefault();
     if (id) {
-      console.log("update");
       axios
         .put(`${API}/bucketlist/${id}`, lists)
         .then(() => {
