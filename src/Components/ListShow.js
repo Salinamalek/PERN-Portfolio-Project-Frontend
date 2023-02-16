@@ -50,9 +50,7 @@ export default function ListShow() {
         <h1>{lists.name}</h1>
         <img className="listImg" src={lists.image} alt={lists.location} />
         <h3>Description: {lists.description}</h3>
-        <h3>
-          Location: {lists.location}, {lists.continent}
-        </h3>
+        <h3>Location: {lists.location}</h3>
         <h3>Continent: {lists.continent}</h3>
         <h3>
           Completed:{" "}
@@ -88,38 +86,37 @@ export default function ListShow() {
       </div>
       <h3>Related Bucket List Ideas:</h3>
       <div className="related-list">
-        {
-          related &&
-            related.map((el) => {
-              if (el.continent === lists.continent && el.id !== lists.id) {
-                return (
-                  <div key={el.id} className="ind-cards">
-                    <Link to={`/bucketlist/${el.id}`}>
-                      <img className="related-imgs" src={el.image} />
-                    </Link>
-                    <Link to={`/bucketlist/${el.id}`}>
-                      <h4>{el.name}</h4>
-                    </Link>
-                  </div>
-                );
-              }
-            })
-          // related.map((el) => {
-          //   if (el.continent.includes(lists.continent) && el.id !== lists.id) {
-          //     return (
-          //       <div key={el.id} className="ind-cards">
-          //         <Link to={`/bucketlist/${el.id}`}>
-          //           <img className="related-imgs" src={el.image} />
-          //         </Link>
-          //         <Link to={`/bucketlist/${el.id}`}>
-          //           <h4>{el.name}</h4>
-          //         </Link>
-          //       </div>
-          //     );
-          // }
-          // })}
-        }
+        {related &&
+          related.map((el) => {
+            if (el.continent.includes(lists.continent) && el.id !== lists.id) {
+              return (
+                <div key={el.id} className="ind-cards">
+                  <Link to={`/bucketlist/${el.id}`}>
+                    <img className="related-imgs" src={el.image} />
+                  </Link>
+                  <Link to={`/bucketlist/${el.id}`}>
+                    <h4>{el.name}</h4>
+                  </Link>
+                </div>
+              );
+            }
+          })}
       </div>
     </div>
   );
 }
+
+// related.map((el) => {
+//   if (el.continent === lists.continent && el.id !== lists.id) {
+//     return (
+//       <div key={el.id} className="ind-cards">
+//         <Link to={`/bucketlist/${el.id}`}>
+//           <img className="related-imgs" src={el.image} />
+//         </Link>
+//         <Link to={`/bucketlist/${el.id}`}>
+//           <h4>{el.name}</h4>
+//         </Link>
+//       </div>
+//     );
+//   }
+// })}

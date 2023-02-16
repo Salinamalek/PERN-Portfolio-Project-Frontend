@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useContextProvider } from "../Provider/Provider.js";
 import ListCard from "./ListCard.js";
 import "./ListIndex.css";
+import "./Styles.js";
 
 export default function ListIndex() {
   const { list, setList, axios, API } = useContextProvider();
