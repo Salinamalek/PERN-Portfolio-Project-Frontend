@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import welcome from "../assets/welcome.png";
-// import "./ListShow.css";
 
 export default function Home() {
   return (

@@ -16,6 +16,8 @@ This fullstack application allows users to add to their bucketlist wishes that c
 
 ### Overview
 
+![DayDream-Bucketlist-Screenshots](public/assets/app-screenshots.png)
+
 #### User Stories:
 
 1. As a user, I can view my bucketlist wishes.
