@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+
 import yes from "../assets/yes.png";
 import no from "../assets/no.png";
 import "./ListCard.css";
 
 export default function ListCard({ list }) {
   const { id, name } = list;
+  // const [searchBar, setSearchBar] = useState("");
+
+  // function filterList(list) {
+  //   const allListItems = searchBar.trim().split(" ");
+  // }
 
   return (
     <tr>
